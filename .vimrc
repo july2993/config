@@ -1,3 +1,4 @@
+#git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 set nocompatible              " be iMproved, required
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
