@@ -1,4 +1,3 @@
-#git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 set nocompatible              " be iMproved, required
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
@@ -9,8 +8,9 @@ call vundle#rc()
 "call vundle#rc(path)
 
 " let Vundle manage Vundle, required
+let g:gofmt_command = "goimports"
 Bundle 'gmarik/vundle'
-"Bundle 'cespare/vim-golang'
+" Bundle 'cespare/vim-golang'
 
 Bundle 'tpope/vim-rails.git'
 Bundle 'ervandew/supertab'
