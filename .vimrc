@@ -3,28 +3,22 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-let g:gofmt_command = "goimports"
 Bundle 'gmarik/vundle'
-" Bundle 'cespare/vim-golang'
-
 Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
 Bundle 'tpope/vim-rails.git'
 " Bundle 'ervandew/supertab'
 Bundle 'scrooloose/nerdtree'
 Bundle 'digitaltoad/vim-jade'
-
 Bundle 'tpope/vim-commentary'
 set commentstring=//\ %s
 map <c-h> gcc
-
 Bundle 'hallison/vim-markdown'
 Bundle 'kien/ctrlp.vim'
-
 Bundle 'dgryski/vim-godef'
-Bundle 'Blackrush/vim-gocode'
 
-"go get code.google.com/p/go.tools/cmd/goimports
-" Bundle 'jnwhiteh/vim-golang'
+Bundle 'fatih/vim-go'
+let g:go_fmt_command = "goimports"
+
 
 filetype plugin indent on   
 syntax enable
@@ -108,11 +102,9 @@ set listchars=tab:>-,trail:-
 
 
 nmap <leader>t :NERDTree<cr>
-" golang
-autocmd BufWritePre,FileWritePre *.go :Fmt
 
 Bundle 'majutsushi/tagbar'
-nmap <F8> :TagbarToggle<CR>
+nmap <leader>p  :TagbarToggle<CR>
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [
