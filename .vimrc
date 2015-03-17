@@ -15,6 +15,7 @@ map <c-h> gcc
 Bundle 'hallison/vim-markdown'
 Bundle 'kien/ctrlp.vim'
 Bundle 'dgryski/vim-godef'
+Bundle 'elzr/vim-json'
 
 Bundle 'fatih/vim-go'
 let g:go_fmt_command = "goimports"
