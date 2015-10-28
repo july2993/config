@@ -12,10 +12,12 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'tpope/vim-commentary'
 set commentstring=//\ %s
 map <c-h> gcc
-Bundle 'hallison/vim-markdown'
+" Bundle 'godlygeek/tabular'
+" Bundle 'plasticboy/vim-markdown'
 Bundle 'kien/ctrlp.vim'
 Bundle 'dgryski/vim-godef'
-Bundle 'elzr/vim-json'
+" Bundle 'elzr/vim-json'
+Bundle 'Valloric/YouCompleteMe'
 
 Bundle 'fatih/vim-go'
 let g:go_fmt_command = "goimports"
@@ -95,7 +97,7 @@ if has("autocmd")
 endif
 
 
-match DiffAdd '\%>100v.*'
+" match DiffAdd '\%>80v.*'
 let g:load_doxygen_syntax=1
 " let g:c_no_
 set listchars=tab:>-,trail:-
@@ -133,3 +135,15 @@ let g:tagbar_type_go = {
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
 \ }
+
+au BufEnter /private/tmp/crontab.* setl backupcopy=yes
+
+
+nmap <C-s>s :cs find s <C-R>=expand("<cword>")<CR><CR>:copen<CR>
+nmap <C-s>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-s>c :cs find c <C-R>=expand("<cword>")<CR><CR>:copen<CR>
+nmap <C-s>t :cs find t <C-R>=expand("<cword>")<CR><CR>:copen<CR>
+nmap <C-s>e :cs find e <C-R>=expand("<cword>")<CR><CR>:copen<CR>
+nmap <C-s>f :cs find f <C-R>=expand("<cfile>")<CR><CR>:copen<CR>
+nmap <C-s>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>:copen<CR>
+nmap <C-s>d :cs find d <C-R>=expand("<cword>")<CR><CR>:copen<CR>
